@@ -67,6 +67,12 @@
 		color: #fff;
 	}
 
+	// .hello__text-block
+
+	&__text-block {
+		flex: 1 1 auto;
+	}
+
 	// .hello__subtitle
 
 	&__subtitle {
@@ -224,6 +230,12 @@
 			&::after{
 				opacity: 1;
 			}
+		}
+
+		@media (max-width: 767px) {
+			font-size: 18px;
+			width: 30px;
+			height: 30px;
 		}
 	}
 }
