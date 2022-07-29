@@ -1,0 +1,186 @@
+.skills {
+	width: 100%;
+	background-color: @darkBackground;
+	font-family: Roboto;
+	color: aliceblue;
+	// .skills__container
+
+	&__container {
+		max-width: 1310px;
+		margin: 0 auto;
+		padding: 50px 15px;
+	}
+
+	// .skills__text-block
+
+	&__text-block {
+	}
+
+	// .skills__title
+
+	&__title {
+		font-size: 24px;
+		font-weight: 500;
+		line-height: 150%;
+
+
+		span{
+			font-weight: 700;
+			animation-name: color-change;
+			animation-iteration-count: infinite;
+			animation-duration: 10s;
+			animation-timing-function: linear;
+		}
+	}
+
+	// .skills__text
+
+	&__text {
+		font-size: 18px;
+		line-height: 130%;
+		margin-bottom: 20px;
+
+
+	}
+
+	// .skills__progress-flex
+
+	&__progress-flex {
+		width: 100%;
+		display: flex;
+		align-items: center;
+
+		@media (max-width: 767px) {
+			flex-wrap: wrap;
+		}
+	}
+
+	// .skills__progress-text
+
+	&__progress-text {
+		flex: 0 1 40%;
+		padding-right: 10px;
+
+		ul{
+			padding-top: 10px;
+
+			li{
+				line-height: 180%;
+				font-size: 16px;
+
+				span{
+					color: aqua;
+					font-weight: 16px;
+				}
+			}
+		}
+
+		@media (max-width: 767px) {
+			flex: 1 1 100%;
+			order: 2;
+		}
+	}
+
+	// .skills__progress-line-block
+
+	&__progress-line-block {
+		flex: 0 1 60%;
+		padding-left: 15px;
+
+		@media (max-width: 767px) {
+			flex: 1 1 100%;
+			order: 1;
+			padding-left: 0;
+			margin-bottom: 20px;
+		}
+	}
+
+	// .skills__progress-line-title
+
+	&__progress-line-title {
+		display: flex;
+		justify-content: space-between;
+
+		font-size: 20px;
+		line-height: 150%;
+		text-transform: uppercase;
+	}
+
+	// .skills__progress-line
+
+	&__progress-line {
+		position: relative;
+		width: 100%;
+		height: 10px;
+		background: @progressGradient;
+		border-radius: 5px;
+		margin-bottom: 10px;
+
+		overflow: hidden;
+
+		&::after{
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 100%;
+			background-color: aliceblue;
+			height: 10px;
+		}
+	}
+}
+
+.__figma{
+
+	&::after{
+		animation-name: color-line-figma;
+		animation-iteration-count: infinite;
+		animation-duration: 8s;
+		animation-timing-function: linear;
+	}
+}
+.__photoshop{
+
+	&::after{
+		animation-name: color-line-photoshop;
+		animation-iteration-count: infinite;
+		animation-duration: 8s;
+		animation-timing-function: linear;
+	}
+}
+.__html{
+
+	&::after{
+		animation-name: color-line-html;
+		animation-iteration-count: infinite;
+		animation-duration: 8s;
+		animation-timing-function: linear;
+	}
+}
+.__css{
+
+	&::after{
+		animation-name: color-line-css;
+		animation-iteration-count: infinite;
+		animation-duration: 8s;
+		animation-timing-function: linear;
+	}
+}
+.__javascript{
+
+	&::after{
+		animation-name: color-line-javascript;
+		animation-iteration-count: infinite;
+		animation-duration: 8s;
+		animation-timing-function: linear;
+	}
+}
+.__git{
+
+	&::after{
+		animation-name: color-line-git;
+		animation-iteration-count: infinite;
+		animation-duration: 8s;
+		animation-timing-function: linear;
+	}
+}
