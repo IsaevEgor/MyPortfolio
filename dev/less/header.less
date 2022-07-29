@@ -1,11 +1,14 @@
 .header {
-	position: relative;
+	position: fixed;
 	z-index: 10;
 	top: 0;
 	left: 0;
 
 	width: 100%;
 	background-color: rgba(39, 39, 39, 0.99);
+
+	transition: 0.5s ease;
+	
 	// .header__container
 
 	&__container {
@@ -39,7 +42,6 @@
 		font-size: 24px;
 		cursor: pointer;
 		transition: 0.5s ease-in;
-
 
 		span{
 			color: yellow;
@@ -86,7 +88,6 @@
 			padding: 15px;
 			background-color: rgba(39, 39, 39, 0.884);
 			border-top: 1px solid aqua;
-
 
 			@media (max-width: 767px) {
 				top: 50px;
@@ -201,4 +202,10 @@
 			left: 0;
 		}
 	}
+}
+.overflow-hidden{
+	overflow: hidden;
+}
+.header-opacity{
+	background-color: rgba(39, 39, 39, 0.616);
 }

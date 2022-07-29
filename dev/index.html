@@ -7,10 +7,12 @@
 	<title>Document</title>
 	
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<link rel="stylesheet" href="https://i.icomoon.io/public/temp/149b2c5a4b/UntitledProject/style.css">
 
+
 </head>
-<body>
+<body id="body">
 	<header class="header">
 		<div class="header__container">
 			<div class="header__row">
@@ -72,7 +74,7 @@
 				</div>
 			</div>
 			<div class="skills__progress-flex">
-				<div class="skills__progress-text">
+				<div data-aos="fade-right" class="skills__progress-text">
 					В своих проектах использую современные инструменты разработчика:
 					<ul>
 						<li>Динамический язык стилей <span>(Less)</span></li>
@@ -80,7 +82,7 @@
 						<li>Применяю <span>адаптивно-отзывчивый</span>  подход к коду</li>
 					</ul>
 				</div>
-				<div class="skills__progress-line-block">
+				<div data-aos="fade-left" class="skills__progress-line-block">
 					<div class="skills__progress-line-title ">
 						<div>figma</div>
 						<div>90%</div>
@@ -110,12 +112,13 @@
 						<div>git</div>
 						<div>70%</div>
 					</div>
-					<div class="skills__progress-line __git"></div>
+					<div class="skills__progress-line __git" ></div>
 				</div>
 			</div>
 		</div>
 	</div>
 
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script src="js/script.js"></script>
 </body>

@@ -56,7 +56,7 @@
 
 		max-width: 1310px;
 		margin: 0 auto;
-		padding: 50px 15px 50px 15px;
+		padding: 100px 15px 50px 15px;
 		width: 100%;
 		height: 100%;
 
@@ -229,17 +229,29 @@
 			background: linear-gradient(0deg, #3561e8,#4a7ef2,#558df6);
 			
 		}
+
+		@media (max-width: 767px) {
+			font-size: 18px;
+		}
 	}
 	.__instagramm{
 		font-size: 28px;
 		&::after{
 			background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
 		}
+		
+		@media (max-width: 767px) {
+			font-size: 18px;
+		}
 	}
 	.__github{
 		font-size: 28px;
 		&::after{
 			background: linear-gradient(335deg, rgba(2,0,36,1) 14%, rgba(112,19,29,1) 60%, rgba(33,67,173,1) 94%, rgba(27,71,185,1) 100%);
+		}
+
+		@media (max-width: 767px) {
+			font-size: 18px;
 		}
 	}
 	@keyframes rotate {
