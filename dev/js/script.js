@@ -28,7 +28,7 @@ headerBurger.addEventListener("click", function() {
 	headerMain.classList.toggle("active-burger--main");
 	body.classList.toggle("overflow-hidden")
 });
-/*
+
 addEventListener("scroll", () => {
 	let scroll = window.pageYOffset;
 
@@ -38,7 +38,7 @@ addEventListener("scroll", () => {
 		header.classList.remove("header-opacity");
 	}
 });
-*/
+
 AOS.init({
 	// Global settings:
 	disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function

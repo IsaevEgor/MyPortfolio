@@ -1,0 +1,150 @@
+.my-works {
+	background-color: @dark-liteBacground;
+	color: aliceblue;
+	font-family: Roboto;
+
+	// .my-works__container
+
+	&__container {
+		max-width: 1310px;
+		padding: 50px 15px;
+		margin: 0 auto;
+	}
+
+	// .my-works__title
+
+	&__title {
+		font-size: 26px;
+		line-height: 150%;
+		margin-bottom: 20px;
+	}
+
+	// .my-works__list
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -10px
+	}
+
+	// .my-works__item
+
+	&__item {
+		flex: 0 1 35%;
+		margin: 0 10px;
+		margin-bottom: 10px;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		position: relative;
+		height: 270px;
+
+		overflow: hidden;
+		transition: 0.5s ease;
+
+		@media (max-width: 767px) {
+			flex: 0 1 100%;
+		}
+
+		&:nth-child(4),
+		&:nth-child(1){
+			flex: 0 1 60%;
+
+			@media (max-width: 920px) {
+				flex: 1 1 50%;
+			}
+			@media (max-width: 767px) {
+				flex: 1 1 100%;
+			}
+		}
+		img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			transition: 1s;
+
+		}
+
+		&::after{
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 0;
+			background-color: rgba(0, 0, 0, 0.61);
+			transition: 0.5s ease;
+		}
+		&::before{
+			content: "";
+			position: absolute;
+			z-index: 1;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 0;
+			background-color: rgba(0, 0, 0, 0.877);
+			transition: 0.5s ease;
+		}
+		&:hover{
+			img{
+				transform: scale(1.1);
+			}
+
+			&::after{
+				height: 65%;
+			}
+			&::before{
+				height: 35%;
+			}
+			.my-works__item-title{
+				opacity: 1;
+			}
+			.my-works__item-button{
+				opacity: 1;
+			}
+		}
+	}
+
+	// .my-works__item-title
+
+	&__item-title {
+		padding-top: 15px;
+		position: relative;
+		z-index: 1;
+		text-align: center;
+		font-size: 34px;
+		color: aliceblue;
+		opacity: 0;
+		transition: 0.5s ease;
+
+	}
+
+	// 
+
+	&__item-button {
+		position: relative;
+		flex: 0 0 35%;
+		
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		z-index: 1;
+		text-align: center;
+		font-size: 22px;
+		color: aliceblue;
+		opacity: 0;
+		transition: 0.5s ease;
+		text-transform: uppercase;
+		transition: 0.3s ease;
+
+		&:hover{
+			background-color: rgb(46, 46, 46);
+		}
+	}
+}
