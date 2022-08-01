@@ -43,17 +43,17 @@
 						<div id="typedButton"></div>
 					</div>
 					<div class="hello__contact-block">
-						<ul class="hello__contact-flex">
-							<li class="hello__contact-item">
-								<a href="" class="hello__contact-link __vk"><p class="_icon-vk"></p></a>
+						<ul class="hello__contact-flex contact__flex">
+							<li class="hello__contact-item contact__item">
+								<a href="" class="hello__contact__link contact__link __vk"><p class="_icon-vk"></p></a>
 							</li>
-							<li class="hello__contact-item">
-								<a href="" class="hello__contact-link __instagramm">
+							<li class="hello__contact-item contact__item">
+								<a href="" class="hello__contact-link contact__link __instagramm">
 									<p class="_icon-instagram"></p>
 								</a>
 							</li>
-							<li class="hello__contact-item">
-								<a href="" class="hello__contact-link __github">
+							<li class="hello__contact-item contact__item">
+								<a href="" class="hello__contact-link contact__link __github">
 									<p class="_icon-github"></p>
 								</a>
 							</li>
@@ -162,6 +162,84 @@
 			</div>
 		</div>
 	</div>
+	<footer class="footer">
+		<div class="footer__container">
+			<div class="footer__block">
+				<div class="footer__block-title">
+					Обсудить сотрудничество или задать мне вопрос 
+				</div>
+				<div class="footer__block-text">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident sapiente, numquam optio reprehenderit et perspiciatis accusamus quos deleniti amet doloribus est temporibus recusandae ullam excepturi tempore nam, consectetur aliquid maxime.
+				</div>
+				<div class="footer__contact-block">
+					<ul class="footer__contact-flex contact__flex">
+						<li class="footer__contact-item contact__item">
+							<a href="" class="footer__contact-link contact__link __vk"><p class="_icon-vk"></p></a>
+						</li>
+						<li class="footer__contact-item contact__item">
+							<a href="" class="footer__contact-link contact__link __instagramm">
+								<p class="_icon-instagram"></p>
+							</a>
+						</li>
+						<li class="footer__contact-item contact__item">
+							<a href="" class="footer__contact-link contact__link __github">
+								<p class="_icon-github"></p>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer__form-block">
+				<form id="form" method="POST" action="#" class="footer__form">
+					<div class="footer__form-title">
+						Связаться со мной
+					</div>
+					<div class="footer__form-item">
+						<input 
+						type="text"
+						placeholder="Ваше Имя"
+						id="formName"
+						class="footer__form-input _req">
+					</div>
+					<div class="footer__form-item">
+						<input 
+						type="email"
+						placeholder="Ваше Email"
+						id="formMail"
+						class="footer__form-input _req _email">
+					</div>
+					<div class="footer__form-item">
+						<label for="formMessage" class="footer__form-label">Сообщение:</label>
+						<textarea name="message" id="formMessage"
+						class="footer__form-textarea"></textarea>
+					</div>
+					<div class="footer__form-item">
+						<input 
+						type="file"
+						accept=".png, .figma, .jpg"
+						id="formFile"
+						class="footer__form-file">
+						<div class="footer__form-file-button">
+							Выбрать
+						</div>
+						<div id="formPreview" class="footer__form-file-preview"></div>
+					</div>
+					<div class="footer__form-item-check">
+						<input 
+						type="checkbox"
+						id="formAgree"
+						name="agree"
+						class="footer__form-checkbox _req"
+						checked>
+						<label for="formAgree" class="footer__form-label">
+							Согласен на обработку персональных данных.
+						</label>
+					</div>
+					<button type="submit" class="footer__form-button">Отправить</button>
+				</form>
+			</div>
+		</div>
+	</footer>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
