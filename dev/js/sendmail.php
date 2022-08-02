@@ -40,7 +40,7 @@ if(!empty($_FILES['image']['tmp_name'])) {
 $mail->Body = $body;
 
 if (!$mail->send()) {
-	$message = 'Ошибка';
+	$message = 'Ошибка php';
 } else {
 	$message = 'Данные отправлены';
 }
