@@ -2,16 +2,15 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'path/to/PHPMailer/src/Exception.php';
-require 'path/to/PHPMailer/src/PHPMailer.php';
-require 'path/to/PHPMailer/src/SMTP.php';
+require 'phpmailer/src/Exception.php';
+require 'phpmailer/src/PHPMailer.php';
 
 $mail = new PHPMailer(true);
 $mail->CharSet = 'UTF-8';
-$mail->setLanguage('ru', '../phpmailer/language/');
+$mail->setLanguage('ru', 'phpmailer/language/');
 $mail->IsHTML(true);
 
-$mail->setFrom('isaevegor.work@gmail.com', 'Заказчик');
+$mail->setFrom('egorisaev.work@mail.ru', 'Egor Isaev');
 $mail->addAddress('isaevegor.work@gmail.com');
 $mail->Subject = 'Письмо из портфолио';
 
