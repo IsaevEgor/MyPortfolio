@@ -62,7 +62,7 @@ AOS.init({
   
   });
 */
-
+/*
 document.addEventListener('DOMContentLoaded', function () {
 	let form = document.getElementById("form");
 	form.addEventListener('submit', formSend);
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		let formData = new FormData(form);
 		formData.append('image', formFile.files[0]);
 
-		/*if (error === undefined) {
+		if (error === undefined) {
 			form.classList.add('_sending')
 			let responce = await fetch('sendmail.php', {
 				method: 'POST',
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		} else {
 			alert ('заполните форму')
 		}
-		*/
+		
 	}
 
 	function formValidate(form) {
@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		reader.readAsDataURL(file);
 	};
 });
-
+*/
 /*
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
