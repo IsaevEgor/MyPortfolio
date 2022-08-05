@@ -1,4 +1,4 @@
-/*
+
 let optionsHello = {
   strings: ['Привет!<br><span class="hello__title">Меня зовут Егор Исаев <br>Я - <span>Web разработчик</span></span>'],
 typeSpeed: 80,
@@ -52,7 +52,7 @@ AOS.init({
 	
   
 	// Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-	offset: 100, // offset (in px) from the original trigger point
+	offset: 30, // offset (in px) from the original trigger point
 	delay: 0, // values from 0 to 3000, with step 50ms
 	duration: 1500, // values from 0 to 3000, with step 50ms
 	easing: 'ease', // default easing for AOS animations
@@ -61,156 +61,57 @@ AOS.init({
 	anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
   
   });
-*/
-/*
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
 	let form = document.getElementById("form");
-	form.addEventListener('submit', formSend);
+	async function handleSubmit(event) {
+	event.preventDefault();
 
-	async function formSend(e) {
+	let formReq = document.querySelectorAll('._req');
+	let data = new FormData(event.target);
+	fetch(event.target.action, {
+	  method: form.method,
+	  body: data,
+	  headers: {
+		'Accept': 'application/json'
+	}
+	}).then(response => {
+	  if (response.ok) {
+		form.classList.add("_sending");
+
+		setTimeout(() => {
+			form.classList.remove("_sending");
+		}, 1500);
+
+		form.reset()
+	  } else {
+		response.json().then(data => {
+		if (Object.hasOwn(data, 'errors')) {
+			formReq.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+		} else {
+			formReq.innerHTML = "Oops! There was a problem submitting your form"
+		}
+	  })
+	}
+	}).catch(error => {
+		formReq.innerHTML = "Oops! There was a problem submitting your form"
+	});
+	}
+	form.addEventListener("submit", handleSubmit)
+});
+
+let anchors = document.querySelectorAll(".header__link");
+
+for(let i of anchors) {
+	i.addEventListener("click", function (e) {
 		e.preventDefault();
 
-		let error = formValidate(form);
-
-		let formData = new FormData(form);
-		formData.append('image', formFile.files[0]);
-
-		if (error === undefined) {
-			form.classList.add('_sending')
-			let responce = await fetch('sendmail.php', {
-				method: 'POST',
-				body: formData
-			});
-			if (responce.ok) {
-				let result = await responce.json();
-				alert(result.message);
-				formPreview.innerHTML = '';
-				form.reset();
-				form.classList.remove('_sending')
-			} else {
-				alert('Ошибка');
-				form.classList.remove('_sending')
-			}
-		} else {
-			alert ('заполните форму')
-		}
-		
-	}
-
-	function formValidate(form) {
-		let error = 0;
-		let formReq = document.querySelectorAll('._req');
-
-		for(let i = 0; i < formReq.length; i++) {
-			const input = formReq[i];
-			formRemoveError(input);
-
-			if (input.classList.contains('._email')) {
-				if (emailTest(input)) {
-					formAddError(input);
-					error++;
-				}
-			} else if (input.getAttribute('type') === 'checkbox' && input.checked === false) {
-				formAddError(input);
-				error++;
-			} else {
-				if (input.value === '') {
-					formAddError(input);
-					error++;
-				}
-			}
-		}
-	}
-	function formAddError(input) {
-		input.parentElement.classList.add('_error');
-		input.classList.add('_error');
-	};
-	function formRemoveError(input) {
-		input.parentElement.classList.remove('_error');
-		input.classList.remove('_error');
-	};
-	function emailTest(input) {
-		return /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i.test(input.value);
-	};
-
-	const formFile = document.getElementById('formFile');
-	const formPreview = document.getElementById('formPreview');
-
-	formFile.addEventListener('change', () => {
-		uploadFile(formFile.files[0]);
-	});
-
-	function uploadFile(file) {
-		if (!['image/jpeg', 'image/png', 'image/gif'].includes(file.type)) {
-			alert('Не тот формат');
-			formFile.value = '';
-			return;
-		}
-		if (file.size > 2 * 1024 * 1024) {
-			alert('файл меньше 2мб надо');
-			return;
-		}
-		let reader = new FileReader();
-		reader.onload = function (e) {
-			formPreview.innerHTML = `<img src="${e.target.result}" alt="Фото">`;
-		};
-		reader.onerror = function (e) {
-			alert('Ошибка');
-		};
-		reader.readAsDataURL(file);
-	};
-});
-*/
-/*
-<?php
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
-require 'phpmailer/src/Exception.php';
-require 'phpmailer/src/PHPMailer.php';
-
-$mail = new PHPMailer(true);
-$mail->CharSet = 'UTF-8';
-$mail->setLanguage('ru', 'phpmailer/language/');
-$mail->IsHTML(true);
-
-$mail->setFrom('egorisaev.work@mail.ru', 'Egor Isaev');
-$mail->addAddress('isaevegor.work@gmail.com');
-$mail->Subject = 'Письмо из портфолио';
-
-$body = '<h1>Новое письмо</h1>';
-
-if(trim(!empty($_POST['name']))){
-	$body.='<p><strong>Имя:</strong> '.$_POST['name'].'</p>';
+		const blockId = i.getAttribute("href").slice(1);
+			document.getElementById(blockId).scrollIntoView({
+			behavior: "smooth",
+			block: "center"
+		})
+	})
 }
-if(trim(!empty($_POST['email']))){
-	$body.='<p><strong>E-mail:</strong> '.$_POST['email'].'</p>';
-}
-if(trim(!empty($_POST['message']))){
-	$body.='<p><strong>Сообщение:</strong> '.$_POST['message'].'</p>';
-}
-
-if(!empty($_FILES['image']['tmp_name'])) {
-	$filePath = __DIR__ . '/files/' . $_FILES['image']['name'];
-
-	if(copy($_FILES['images']['tmp_name'], $filePath)){
-		$fileAttach = $filePath;
-		$body.='<p><strong>Файлы:</strong>.</p>';
-		$mail->addAttachment($fileAttach);
-	}
-}
-
-$mail->Body = $body;
-
-if (!$mail->send()) {
-	$message = 'Ошибка php';
-} else {
-	$message = 'Данные отправлены';
-}
-
-$response = ['message' => $message];
-
-header('Content-type: application/json');
-echo json_encode($response);
-?>
-*/

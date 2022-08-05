@@ -102,7 +102,7 @@
     right: -90%
   }
   100% {
-    right: -90%
+    right: 0
   }
 }
 @keyframes color-line-figma {
@@ -131,7 +131,7 @@
     right: -90%
   }
   100% {
-    right: -90%
+    right: 0
   }
 }
 @-webkit-keyframes color-line-photoshop {
@@ -163,7 +163,7 @@
     right: -65%
   }
   100% {
-    right: -65%
+    right: 0
   }
 }
 @keyframes color-line-photoshop {
@@ -195,7 +195,7 @@
     right: -65%
   }
   100% {
-    right: -65%
+    right: 0
   }
 }
 @-webkit-keyframes color-line-html {
@@ -227,7 +227,7 @@
     right: -90%
   }
   100% {
-    right: -90%
+    right: 0
   }
 }
 @keyframes color-line-html {
@@ -259,7 +259,7 @@
     right: -90%
   }
   100% {
-    right: -90%
+    right: 0
   }
 }
 @-webkit-keyframes color-line-css {
@@ -291,7 +291,7 @@
     right: -85%
   }
   100% {
-    right: -85%
+    right: 0
   }
 }
 @keyframes color-line-css {
@@ -323,7 +323,7 @@
     right: -85%
   }
   100% {
-    right: -85%
+    right: 0
   }
 }
 @-webkit-keyframes color-line-javascript {
@@ -351,8 +351,11 @@
   70% {
     right: -75%
   }
-  100% {
+  90% {
     right: -75%
+  }
+  100% {
+    right: 0
   }
 }
 @keyframes color-line-javascript {
@@ -380,8 +383,11 @@
   70% {
     right: -75%
   }
-  100% {
+  90% {
     right: -75%
+  }
+  100% {
+    right: 0
   }
 }
 @-webkit-keyframes color-line-git {
@@ -413,7 +419,7 @@
     right: -70%
   }
   100% {
-    right: -70%
+    right: 0
   }
 }
 @keyframes color-line-git {
@@ -445,7 +451,7 @@
     right: -70%
   }
   100% {
-    right: -70%
+    right: 0
   }
 }
 .__button {
@@ -703,6 +709,18 @@
     font-size: 18px
   }
 }
+.__telegram {
+  font-size: 28px
+}
+.__telegram::after {
+  background: -webkit-gradient(linear,left top,right top,from(#9cecfb),color-stop(#65c7f7),to(#0052d4));
+  background: linear-gradient(to right,#9cecfb,#65c7f7,#0052d4)
+}
+@media (max-width:767px) {
+  .__telegram {
+    font-size: 18px
+  }
+}
 @font-face {
   font-family: 'Bebas Neue';
   font-style: normal;
@@ -809,8 +827,8 @@
   src: url(https://fonts.gstatic.com/s/rubikbeastly/v10/0QImMXRd5oOmSC2ZQ7o9653X07w.ttf) format('truetype')
 }
 .footer {
-  background: -webkit-gradient(linear,left top,left bottom,from(#000),color-stop(44%,#494949),to(#000));
-  background: linear-gradient(180deg,#000 0,#494949 44%,#000 100%);
+  background: -webkit-gradient(linear,left top,right top,from(#141e30),to(#243b55));
+  background: linear-gradient(to right,#141e30,#243b55);
   color: #f0f8ff
 }
 .footer__container {
@@ -827,11 +845,26 @@
   align-items: center;
   font-family: Roboto
 }
+@media (max-width:767px) {
+  .footer__container {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 25px 15px
+  }
+}
 .footer__block {
   -webkit-box-flex: 0;
   -ms-flex: 0 1 50%;
   flex: 0 1 50%;
   padding-right: 15px
+}
+@media (max-width:767px) {
+  .footer__block {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
+    margin-bottom: 20px
+  }
 }
 .footer__block-title {
   font-size: 26px;
@@ -845,6 +878,13 @@
   line-height: 150%;
   margin-bottom: 20px
 }
+@media (max-width:767px) {
+  .footer__contact-flex {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+  }
+}
 .footer__form-block {
   -webkit-box-flex: 0;
   -ms-flex: 0 1 50%;
@@ -856,12 +896,22 @@
   -ms-flex-pack: end;
   justify-content: flex-end
 }
+@media (max-width:767px) {
+  .footer__form-block {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 500px;
+    flex: 0 1 500px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+  }
+}
 .footer__form {
   position: relative;
   max-width: 500px;
   height: 100%;
-  padding: 20px 15px;
-  background-color: #000;
+  padding: 35px 15px;
+  background-color: #1f1f1f;
   border-radius: 15px
 }
 .footer__form::after {
@@ -900,19 +950,31 @@
   width: 100%;
   height: 50px;
   padding: 0 15px;
+  margin-bottom: 5px;
   font-size: 18px;
   outline: 0;
   border-radius: 5px;
-  -webkit-transition: .5s;
-  transition: .5s
+  border-bottom: 5px solid transparent
 }
 .footer__form-input:focus {
-  -webkit-box-shadow: 0 0 10px 5px rgba(0,208,217,.5);
-  box-shadow: 0 0 10px 5px rgba(0,208,217,.5)
+  border-bottom: 5px solid #0ff
 }
 .footer__form-label span {
   font-size: 16px;
   margin-bottom: 10px
+}
+.footer__form--error-info {
+  opacity: 0;
+  font-size: 12px;
+  line-height: 120%;
+  color: #ff4d4d;
+  letter-spacing: 2px;
+  font-weight: 500;
+  -webkit-transition: .2s ease;
+  transition: .2s ease
+}
+.footer__form--error-info._show {
+  opacity: 1
 }
 .footer__form-textarea {
   width: 100%;
@@ -921,32 +983,10 @@
   min-height: 120px;
   resize: vertical;
   outline: 0;
-  border-radius: 5px;
-  -webkit-transition: .5s;
-  transition: .5s
+  border-radius: 5px
 }
 .footer__form-textarea:focus {
-  -webkit-box-shadow: 0 7px 10px 5px rgba(0,208,217,.5);
-  box-shadow: 0 7px 10px 5px rgba(0,208,217,.5)
-}
-.footer__form-file {
-  position: absolute;
-  max-width: 150px;
-  padding: 15px;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  font-size: 0;
-  cursor: pointer
-}
-.footer__form-file-button {
-  max-width: 150px;
-  text-align: center;
-  padding: 15px;
-  text-transform: uppercase;
-  background-color: gray
+  border-bottom: 5px solid #0ff
 }
 .footer__form-item-check {
   display: -webkit-box;
@@ -996,11 +1036,15 @@
   text-align: center;
   background-color: gray;
   text-transform: uppercase;
-  border-radius: 5px
+  border-radius: 5px;
+  -webkit-transition: .3s ease;
+  transition: .3s ease
+}
+.footer__form-button:hover {
+  background-color: #000
 }
 ._error {
-  -webkit-box-shadow: 0 0 10px 5px rgba(255,0,0,.5);
-  box-shadow: 0 0 10px 5px rgba(255,0,0,.5)
+  border-bottom: 5px solid red
 }
 .header {
   position: fixed;
@@ -1008,7 +1052,8 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(39,39,39,.99);
+  background: -webkit-gradient(linear,left top,right top,from(#000),to(#434343));
+  background: linear-gradient(to right,#000,#434343);
   -webkit-transition: .5s ease;
   transition: .5s ease
 }
@@ -1440,6 +1485,9 @@
 ._icon-github:before {
   content: "\eab0"
 }
+._icon-telegram:before {
+  content: "\ea95"
+}
 * {
   padding: 0;
   margin: 0;
@@ -1504,13 +1552,13 @@ h6 {
   background-color: rgba(39,39,39,.99);
   font-family: Roboto;
   color: #f0f8ff;
-  background: -webkit-gradient(linear,left top,left bottom,from(#000),color-stop(44%,#494949),to(#000));
-  background: linear-gradient(180deg,#000 0,#494949 44%,#000 100%)
+  background: -webkit-gradient(linear,left top,right top,from(#355c7d),color-stop(#6c5b7b),to(#c06c84));
+  background: linear-gradient(to right,#355c7d,#6c5b7b,#c06c84)
 }
 .skills__container {
   max-width: 1310px;
   margin: 0 auto;
-  padding: 50px 15px
+  padding: 80px 15px
 }
 .skills__title {
   font-size: 24px;
@@ -1529,7 +1577,7 @@ h6 {
   animation-timing-function: linear
 }
 .skills__text {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 130%;
   margin-bottom: 20px
 }
@@ -1552,14 +1600,15 @@ h6 {
   -webkit-box-flex: 0;
   -ms-flex: 0 1 40%;
   flex: 0 1 40%;
-  padding-right: 10px
+  padding-right: 10px;
+  font-size: 20px
 }
 .skills__progress-text ul {
   padding-top: 10px
 }
 .skills__progress-text ul li {
   line-height: 180%;
-  font-size: 16px
+  font-size: 20px
 }
 .skills__progress-text ul li span {
   color: #0ff;
@@ -1626,8 +1675,8 @@ h6 {
 .__figma::after {
   -webkit-animation-name: color-line-figma;
   animation-name: color-line-figma;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
   -webkit-animation-duration: 8s;
   animation-duration: 8s;
   -webkit-animation-timing-function: linear;
@@ -1638,8 +1687,8 @@ h6 {
 .__photoshop::after {
   -webkit-animation-name: color-line-photoshop;
   animation-name: color-line-photoshop;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
   -webkit-animation-duration: 8s;
   animation-duration: 8s;
   -webkit-animation-timing-function: linear;
@@ -1650,8 +1699,8 @@ h6 {
 .__html::after {
   -webkit-animation-name: color-line-html;
   animation-name: color-line-html;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
   -webkit-animation-duration: 8s;
   animation-duration: 8s;
   -webkit-animation-timing-function: linear;
@@ -1662,8 +1711,8 @@ h6 {
 .__css::after {
   -webkit-animation-name: color-line-css;
   animation-name: color-line-css;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
   -webkit-animation-duration: 8s;
   animation-duration: 8s;
   -webkit-animation-timing-function: linear;
@@ -1674,6 +1723,8 @@ h6 {
 .__javascript::after {
   -webkit-animation-name: color-line-javascript;
   animation-name: color-line-javascript;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
   -webkit-animation-duration: 8s;
   animation-duration: 8s;
   -webkit-animation-timing-function: linear;
@@ -1684,8 +1735,8 @@ h6 {
 .__git::after {
   -webkit-animation-name: color-line-git;
   animation-name: color-line-git;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
   -webkit-animation-duration: 8s;
   animation-duration: 8s;
   -webkit-animation-timing-function: linear;
@@ -1694,7 +1745,8 @@ h6 {
   animation-fill-mode: forwards
 }
 .my-works {
-  background-color: rgba(75,75,75,.99);
+  background: -webkit-gradient(linear,left top,right top,from(#0f2027),color-stop(#203a43),to(#2c5364));
+  background: linear-gradient(to right,#0f2027,#203a43,#2c5364);
   color: #f0f8ff;
   font-family: Roboto
 }
@@ -1733,7 +1785,7 @@ h6 {
   -ms-flex-pack: justify;
   justify-content: space-between;
   position: relative;
-  height: 270px;
+  height: 350px;
   overflow: hidden;
   -webkit-transition: .5s ease;
   transition: .5s ease

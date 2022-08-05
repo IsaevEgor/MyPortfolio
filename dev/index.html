@@ -8,8 +8,7 @@
 	
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-	<link rel="stylesheet" href="https://i.icomoon.io/public/temp/149b2c5a4b/UntitledProject/style.css">
-
+	<link rel="stylesheet" href="https://i.icomoon.io/public/temp/51422a9312/UntitledProject/style.css">
 
 </head>
 <body id="body">
@@ -20,10 +19,10 @@
 					 <h2> <span>&lt</span>Developer<span>/</span><span>&gt</span></h2>
 				</div>
 				<ul id="headerMain" class="header__main">
-					<li class="header__item"><a href="#">Обо Мне</a></li>
-					<li class="header__item"><a href="#">Навыки</a></li>
-					<li class="header__item"><a href="#">Работы</a></li>
-					<li class="header__item"><a href="#">Контакты</a></li>
+					<li class="header__item"><a class="header__link" href="#about">Обо Мне</a></li>
+					<li class="header__item"><a class="header__link" href="#skills">Навыки</a></li>
+					<li class="header__item"><a class="header__link" href="#works">Работы</a></li>
+					<li class="header__item"><a class="header__link" href="#form">Контакты</a></li>
 				</ul>
 				<div id="headerBurger" class="header__burger">
 					<span></span>
@@ -31,7 +30,7 @@
 			</div>
 		</div>
 	</header>
-	<div class="hello">
+	<div id="about" class="hello">
 		<div class="hello__video-bg">
 			<div class="hello__video-block">
 				<video src="video/video-bg-.mp4" class="hello__video" autoplay muted loop></video>
@@ -45,16 +44,21 @@
 					<div class="hello__contact-block">
 						<ul class="hello__contact-flex contact__flex">
 							<li class="hello__contact-item contact__item">
-								<a href="" class="hello__contact__link contact__link __vk"><p class="_icon-vk"></p></a>
+								<a href="https://vk.com/id68402157" class="hello__contact__link contact__link __vk"><p class="_icon-vk"></p></a>
 							</li>
 							<li class="hello__contact-item contact__item">
-								<a href="" class="hello__contact-link contact__link __instagramm">
+								<a href="https://www.instagram.com/accounts/login/?next=/_isae.v_/" class="hello__contact-link contact__link __instagramm">
 									<p class="_icon-instagram"></p>
 								</a>
 							</li>
 							<li class="hello__contact-item contact__item">
-								<a href="" class="hello__contact-link contact__link __github">
+								<a href="https://github.com/IsaevEgor" class="hello__contact-link contact__link __github">
 									<p class="_icon-github"></p>
+								</a>
+							</li>
+							<li class="hello__contact-item contact__item">
+								<a href="https://t.me/Egor_i_saev" class="hello__contact-link contact__link __telegram">
+									<p class="_icon-telegram"></p>
 								</a>
 							</li>
 						</ul>
@@ -63,7 +67,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="skills">
+	<div id="skills" class="skills">
 		<div class="skills__container">
 			<div class="skills__text-block">
 				<div class="skills__title">
@@ -77,38 +81,38 @@
 				<div data-aos="fade-right" class="skills__progress-text">
 					В своих проектах использую современные инструменты разработчика:
 					<ul>
-						<li>Динамический язык стилей <span>(Less)</span></li>
-						<li>Таск-менеджер для автоматического выполнения <span>(Gulp)</span></li>
-						<li>Применяю <span>адаптивно-отзывчивый</span>  подход к коду</li>
+						<li data-aos="fade-right" data-aos-delay="250">Динамический язык стилей <span>(Less)</span></li>
+						<li data-aos="fade-right" data-aos-delay="350">Таск-менеджер для автоматического выполнения <span>(Gulp)</span></li>
+						<li data-aos="fade-right" data-aos-delay="450">Применяю <span>адаптивно-отзывчивый</span>  подход к коду</li>
 					</ul>
 				</div>
-				<div data-aos="fade-left" class="skills__progress-line-block">
-					<div class="skills__progress-line-title ">
+				<div  class="skills__progress-line-block">
+					<div data-aos="fade-left" class="skills__progress-line-title ">
 						<div>figma</div>
 						<div>90%</div>
 					</div>
 					<div class="skills__progress-line __figma"></div>
-					<div class="skills__progress-line-title">
+					<div data-aos="fade-left" class="skills__progress-line-title">
 						<div>photoshop</div>
 						<div>65%</div>
 					</div>
 					<div class="skills__progress-line __photoshop"></div>
-					<div class="skills__progress-line-title">
+					<div data-aos="fade-left" class="skills__progress-line-title">
 						<div>html5</div>
 						<div>90%</div>
 					</div>
 					<div class="skills__progress-line __html"></div>
-					<div class="skills__progress-line-title">
+					<div data-aos="fade-left" class="skills__progress-line-title">
 						<div>css(3)</div>
 						<div>85%</div>
 					</div>
 					<div class="skills__progress-line __css"></div>
-					<div class="skills__progress-line-title">
+					<div data-aos="fade-left" class="skills__progress-line-title">
 						<div>Javascript</div>
 						<div>75%</div>
 					</div>
 					<div class="skills__progress-line __javascript"></div>
-					<div class="skills__progress-line-title">
+					<div data-aos="fade-left" class="skills__progress-line-title">
 						<div>git</div>
 						<div>70%</div>
 					</div>
@@ -117,7 +121,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="my-works">
+	<div id="works" class="my-works">
 		<div class="my-works__container">
 			<div class="my-works__title">
 				Мои Работы
@@ -128,7 +132,7 @@
 					<div class="my-works__item-title">
 						Fire-Money
 					</div>
-					<a href="#" class="my-works__item-button">
+					<a href="https://isaevegor.github.io/Fire-Money/dev/index.html" class="my-works__item-button">
 						Посмотреть
 					</a>
 				</div>
@@ -155,7 +159,7 @@
 					<div class="my-works__item-title">
 						Infinizal
 					</div>
-					<a href="#" class="my-works__item-button">
+					<a href="https://isaevegor.github.io/Infinizal/dist/home.html" class="my-works__item-button">
 						Посмотреть
 					</a>
 				</div>
@@ -174,23 +178,33 @@
 				<div class="footer__contact-block">
 					<ul class="footer__contact-flex contact__flex">
 						<li class="footer__contact-item contact__item">
-							<a href="" class="footer__contact-link contact__link __vk"><p class="_icon-vk"></p></a>
+							<a href="https://vk.com/id68402157" class="footer__contact-link contact__link __vk"><p class="_icon-vk"></p></a>
 						</li>
 						<li class="footer__contact-item contact__item">
-							<a href="" class="footer__contact-link contact__link __instagramm">
+							<a href="https://www.instagram.com/accounts/login/?next=/_isae.v_/" class="footer__contact-link contact__link __instagramm">
 								<p class="_icon-instagram"></p>
 							</a>
 						</li>
 						<li class="footer__contact-item contact__item">
-							<a href="" class="footer__contact-link contact__link __github">
+							<a href="https://github.com/IsaevEgor" class="footer__contact-link contact__link __github">
 								<p class="_icon-github"></p>
+							</a>
+						</li>
+						<li class="footer__contact-item contact__item">
+							<a href="https://t.me/Egor_i_saev" class="footer__contact-link contact__link __telegram">
+								<p class="_icon-telegram"></p>
 							</a>
 						</li>
 					</ul>
 				</div>
 			</div>
 			<div class="footer__form-block">
-				<form id="form" method="POST" action="sendmail.php" class="footer__form">
+				<!---->
+				<form 
+				id="form" 
+				action="https://formspree.io/f/xdojndvn"
+				method="POST" 
+				class="footer__form">
 					<div class="footer__form-title">
 						Связаться со мной
 					</div>
@@ -205,7 +219,7 @@
 					<div class="footer__form-item">
 						<input 
 						type="email"
-						placeholder="Ваше Email"
+						placeholder="example@mail.com"
 						id="formMail"
 						name="user_email"
 						class="footer__form-input _req _email">
@@ -214,17 +228,6 @@
 						<label for="formMessage" class="footer__form-label">Сообщение:</label>
 						<textarea name="user_message" id="formMessage"
 						class="footer__form-textarea"></textarea>
-					</div>
-					<div class="footer__form-item">
-						<input 
-						type="file"
-						accept=".png, .figma, .jpg"
-						id="formFile"
-						class="footer__form-file">
-						<div class="footer__form-file-button">
-							Выбрать
-						</div>
-						<div id="formPreview" class="footer__form-file-preview"></div>
 					</div>
 					<div class="footer__form-item-check">
 						<input 
