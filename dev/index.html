@@ -39,7 +39,7 @@
 				<div class="hello__container">
 					<div class="hello__text-block">
 						<span id="typed" class="hello__subtitle"></span>
-						<div id="typedButton"></div>
+						<a href="#form" id="typedButton"></a>
 					</div>
 					<div class="hello__contact-block">
 						<ul class="hello__contact-flex contact__flex">
@@ -141,7 +141,7 @@
 					<div class="my-works__item-title">
 						Wishbone
 					</div>
-					<a href="#" class="my-works__item-button">
+					<a href="https://isaevegor.github.io/Wishbone/dist/index.html" class="my-works__item-button">
 						Посмотреть
 					</a>
 				</div>
@@ -150,7 +150,7 @@
 					<div class="my-works__item-title">
 						Happy Project
 					</div>
-					<a href="#" class="my-works__item-button">
+					<a href="https://isaevegor.github.io/H-app-y-Project/dist/index.html" class="my-works__item-button">
 						Посмотреть
 					</a>
 				</div>
@@ -173,7 +173,8 @@
 					Обсудить сотрудничество или задать мне вопрос 
 				</div>
 				<div class="footer__block-text">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident sapiente, numquam optio reprehenderit et perspiciatis accusamus quos deleniti amet doloribus est temporibus recusandae ullam excepturi tempore nam, consectetur aliquid maxime.
+					Вы можете связаться со мной в социальных сетях, в приоретете teltgram.<br> Либо заполнить форму и отпраить письмом.
+					<br> Спасибо что ознакомились с моим проектом!
 				</div>
 				<div class="footer__contact-block">
 					<ul class="footer__contact-flex contact__flex">
@@ -199,11 +200,11 @@
 				</div>
 			</div>
 			<div class="footer__form-block">
-				<!---->
+				<!--action="https://formspree.io/f/xdojndvn"-->
 				<form 
-				id="form" 
-				action="https://formspree.io/f/xdojndvn"
-				method="POST" 
+				action="sendmail.php"
+				method="POST"
+				id="form"
 				class="footer__form">
 					<div class="footer__form-title">
 						Связаться со мной
@@ -249,5 +250,6 @@
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script src="js/script.js"></script>
+<script src="js/mail.js"></script>
 </body>
 </html>

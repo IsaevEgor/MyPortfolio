@@ -1300,7 +1300,7 @@
 }
 @media (max-width:767px) {
   .hello__video-block {
-    height: 300px;
+    height: 100vh;
     background-image: url(../img/bg-image.png);
     background-size: cover;
     background-position: center
@@ -1795,6 +1795,21 @@ h6 {
     -webkit-box-flex: 0;
     -ms-flex: 0 1 100%;
     flex: 0 1 100%
+  }
+}
+@media (max-width:600px) {
+  .my-works__item {
+    height: 300px
+  }
+}
+@media (max-width:500px) {
+  .my-works__item {
+    height: 250px
+  }
+}
+@media (max-width:450px) {
+  .my-works__item {
+    height: 200px
   }
 }
 .my-works__item:nth-child(1),

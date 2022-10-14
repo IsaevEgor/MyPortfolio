@@ -1,7 +1,13 @@
 
 let optionsHello = {
-  strings: ['Привет!<br><span class="hello__title">Меня зовут Егор Исаев <br>Я - <span>Web разработчик</span></span>'],
-typeSpeed: 80,
+  strings: [
+	`Привет!
+
+	<br><span class="hello__title">Рад, что вы заинтересовались моим портфолио!
+	<br>Меня зовут Егор Исаев
+	<br>Я - <span>Web-разработчик</span>
+</span>`],
+typeSpeed: 50,
 showCursor: true,
 
 };
@@ -9,7 +15,7 @@ showCursor: true,
 let typed = new Typed("#typed", optionsHello);
 
 let optionsButton = {
-  strings: ['<a href="#" class="hello__button __button"><span class="__button-line __button-line--top"></span><span class="__button-line __button-line--right"></span><span class="__button-line __button-line--bottom"></span><span class="__button-line __button-line--left"></span>Написать мне</a>'],
+  strings: ['<br><a href="#" class="hello__button __button"><span class="__button-line __button-line--top"></span><span class="__button-line __button-line--right"></span><span class="__button-line __button-line--bottom"></span><span class="__button-line __button-line--left"></span>Написать мне</a>'],
 typeSpeed: 100,
 showCursor: false,
 startDelay: 6000,
@@ -64,7 +70,7 @@ AOS.init({
 
 
 
-document.addEventListener('DOMContentLoaded', function () {
+/*document.addEventListener('DOMContentLoaded', function () {
 	let form = document.getElementById("form");
 	async function handleSubmit(event) {
 	event.preventDefault();
@@ -101,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 	form.addEventListener("submit", handleSubmit)
 });
-
+*/
 let anchors = document.querySelectorAll(".header__link");
 
 for(let i of anchors) {
@@ -114,4 +120,16 @@ for(let i of anchors) {
 			block: "center"
 		})
 	})
-}
+};
+
+const contactMe = document.getElementById("typedButton");
+
+contactMe.addEventListener("click", function (e) {
+	e.preventDefault();
+
+	const blockId = contactMe.getAttribute("href").slice(1);
+		document.getElementById(blockId).scrollIntoView({
+		behavior: "smooth",
+		block: "center"
+	})
+})
